@@ -1,0 +1,55 @@
+/* pages/rank.wxss */
+
+/* pages/rank/rank.wxss */
+
+
+
+.c0 {
+  width: 8%;
+  /*border-bottom: 1px solid gray;*/
+  padding: 0px;
+}
+
+.c1 {
+  width: 17%;
+  /*border-bottom: 1px solid gray;*/
+  text-align: left;
+}
+
+.c0 image {
+  width:20px;
+  height: 30px;
+  vertical-align:middle;
+}
+
+.c2 {
+  width: 45% ;
+  /*border-bottom: 1px solid gray;*/
+  text-align: center;
+}
+
+.c3{
+  width: 25%;
+  /*border-bottom: 1px solid gray;*/
+  text-align: center;
+}
+
+.c4{
+  width: 15%;
+  /*border-bottom: 1px solid gray;*/
+  text-align: center;
+}
+
+view{
+  line-height: 40px;
+}
+
+
+
+
+.col_view_row {
+  display:flex; 
+  flex-direction: row;
+  border-bottom: 1px dotted gray;
+
+}

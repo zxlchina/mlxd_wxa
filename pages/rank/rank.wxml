@@ -1,0 +1,72 @@
+<!--pages/rank.wxml-->
+
+<view style="margin: 0px auto">
+<view style="text-align: center;">
+<image  src="../../resource/lhb.png" class="img1"></image>
+</view>
+<radio-group bindchange="onchangetime" style="margin: 0px auto">
+<view class='col_view' style="width: 60%; margin: 0px auto;">
+  
+    <view style='width:33%'>
+    <radio value='0' checked='{{time_mode=="0"}}'>今日</radio>
+    </view>
+    
+    <view style='width:33%'>
+    <radio value='1' checked='{{time_mode=="1"}}'>本周</radio>
+    </view>
+
+
+    <view style='width:33%'>
+    <radio value='2' checked='{{time_mode=="2"}}'>上周</radio>
+    </view>
+  
+</view>
+</radio-group>
+
+<view style="padding-top: 0px; margin: 0px auto; width: 90%" wx:if="{{rank_list.length>0}}">
+  <view>
+    <view class='col_view_row' style="  font-weight: bold;">
+      <view class='c1' style='width:25%; text-align: left; padding-left:0px;'>
+        排名
+      </view>
+      <view class='c2'>
+        金主
+      </view>
+      <view class='c3'>
+        购买次数
+      </view>
+    </view>
+    <view wx:for='{{rank_list}}' class='col_view_row'>
+      <view class='c0'>
+        <image wx:if="{{index == 0}}" src='../../resource/rank1.png' ></image>
+        <image wx:if="{{index == 1}}" src='../../resource/rank2.png' ></image>
+        <image wx:if="{{index == 2}}" src='../../resource/rank3.png' ></image>
+      </view>
+      <view wx:if="{{index != 0}}" class='c1'>
+        {{index + 1}}
+      </view>
+      <view wx:if="{{index != 0}}" class='c2'>
+        {{item.buyer_nick}}
+      </view>
+      <view wx:if="{{index != 0}}" class='c3'>
+        {{item.count}}
+      </view>
+
+      <view wx:if="{{index == 0}}" class='c1' style="color: red; font-weight: bold;">
+         冠军
+      </view>
+      <view wx:if="{{index == 0}}" class='c2' style="color: red; font-weight: bold;" >
+        {{item.buyer_nick}}
+      </view>
+      <view wx:if="{{index == 0}}" class='c3' style="color: red; font-weight: bold;" >
+        {{item.count}}
+      </view>      
+    </view>
+  </view>
+</view>
+
+<view wx:else style="text-align:center; font-size:40rpx; margin-top:100rpx">
+  <view>空空如也，快进店挑选吧</view>
+</view>
+
+</view>

@@ -1,0 +1,14 @@
+<!--pages/reply/reply.wxml-->
+<view style="padding-left:20px; padding-right:20px">
+<view class='view_title'>
+  填写反馈
+</view>
+<view style=''>
+<textarea style='border: 1px solid; width:99%' placeholder="反馈你希望上架的商品或好的购物体验..." bindinput='oninput' value="{{content}}" >
+  
+</textarea>
+<view style="margin-top:20px">
+<button bindtap='submit' >提交</button>
+</view>
+</view>
+</view>
